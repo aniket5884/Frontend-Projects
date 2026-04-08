@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Management</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="header">
+<h1>Product Management System</h1>
+</div>
+
+<div class="main">
+
+<input type="text" id="productId" placeholder="Product id">
+<input type="text" id="productName" placeholder="Product Name">
+<input type="number" id="productPrice" placeholder="Product Price">
+
+<br><br>
+
+<div class="button">
+<button onclick="addProduct()" style="background-color: #27ae60;">Add Product</button>
+<button onclick="loadProducts()" style="background-color: #3498db;">Load Product</button>
+</div>
+</div>
+
+
+<br><br>
+
+<h2 align="center">List Of Products</h2>
+
+<table border="1">
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Price(in Rs.)</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="productTable">
+
+</tbody>
+
+</table>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
