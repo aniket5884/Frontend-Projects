@@ -1,55 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Product Management</title>
-<link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="header">
-<h1>Product Management System</h1>
+<div class="calculator">
+
+     <h1>Calculator</h1>
+
+    <input style="padding-right: 5px;" type="text" placeholder="0" id="display" disabled>
+
+    <div class="buttons">
+        <button style="background-color: rgb(69, 122, 67);" onclick="clearDisplay()">C</button>
+        <button style="background-color: crimson; " onclick="deleteLast()">DEL</button>
+        <button style="background-color: rgb(191, 196, 41);" onclick="appendValue('%')">%</button>
+        <button style="background-color: rgb(234, 164, 35);" onclick="appendValue('/')">/</button>
+
+        <button onclick="appendValue('7')">7</button>
+        <button onclick="appendValue('8')">8</button>
+        <button onclick="appendValue('9')">9</button>
+        <button  style="background-color: rgb(118, 180, 25);"onclick="appendValue('*')">*</button>
+
+        <button onclick="appendValue('4')">4</button>
+        <button onclick="appendValue('5')">5</button>
+        <button onclick="appendValue('6')">6</button>
+        <button style="background-color: rgb(90, 36, 196);" onclick="appendValue('-')">-</button>
+
+        <button onclick="appendValue('1')">1</button>
+        <button onclick="appendValue('2')">2</button>
+        <button onclick="appendValue('3')">3</button>
+        <button style="background-color: rgb(132, 18, 18);" onclick="appendValue('+')">+</button>
+
+        <button onclick="appendValue('0')">0</button>
+        <button onclick="appendValue('00')">00</button>
+        <button onclick="appendValue('.')">.</button>
+        <button style="background-color: rgb(51, 117, 231);" onclick="calculate()">=</button>
+    </div>
+
 </div>
-
-<div class="main">
-
-<input type="text" id="productId" placeholder="Product id">
-<input type="text" id="productName" placeholder="Product Name">
-<input type="number" id="productPrice" placeholder="Product Price">
-
-<br><br>
-
-<div class="button">
-<button onclick="addProduct()" style="background-color: #27ae60;">Add Product</button>
-<button onclick="loadProducts()" style="background-color: #3498db;">Load Product</button>
-</div>
-</div>
-
-
-<br><br>
-
-<h2 align="center">List Of Products</h2>
-
-<table border="1">
-
-<thead>
-<tr>
-<th>ID</th>
-<th>Name</th>
-<th>Price(in Rs.)</th>
-<th>Action</th>
-</tr>
-</thead>
-
-<tbody id="productTable">
-
-</tbody>
-
-</table>
-
-
 
 <script src="script.js"></script>
 
